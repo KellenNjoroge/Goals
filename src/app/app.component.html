@@ -20,7 +20,11 @@
 </ul>
 
   <h1>My Goals</h1>
+  <hr>
+  
   <ul>
-    <li *ngFor='let goal of goals'>{{goal}}</li>
+    <li *ngFor='let goal of goals'>{{goal.name}}</li>
+    <app-goal></app-goal>
   </ul>  
+    <p *ngIf='goals.length > 5'>You have too many goals</p>
 
