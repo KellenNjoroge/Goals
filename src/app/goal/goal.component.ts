@@ -16,6 +16,11 @@ export class GoalComponent implements OnInit {
     new Goal(5,'Buy Omena for Cat','hug my cat'),
     new Goal(6,'Plan for my birthday party','invite people'),
   ]
+  completeGoal(isComplete, index){
+    if (isComplete){
+        this.goals.splice(index,1);
+    }
+  }
   toogleDetails(index){
     this.goals[index].showDescription = !this.goals[index].showDescription;
   }
