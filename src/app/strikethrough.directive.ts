@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef,Input, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appStrikethrough]'
@@ -11,7 +11,7 @@ export class StrikethroughDirective {
     this.textDeco("line-through")
   }
 
-  @HostListener("dbclick") onDoubleClicks(){
+  @HostListener("dblclick") onDoubleClicks(){
     this.textDeco("None")
   }
   
