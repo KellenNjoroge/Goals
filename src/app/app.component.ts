@@ -13,6 +13,6 @@ export class AppComponent {
       new Goal(4,'Look for Sticker'),
       new Goal(5,'Buy Omena for Cat'),
       new Goal(6,'Plan for my birthday party'),
-      */
-    ]
+    
+    ] */
 }
