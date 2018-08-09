@@ -6,6 +6,7 @@ import { Goal } from './goal';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+    title = 'Goals';
     goals = [
       /*new Goal(1,'Watch Wonder woman'),
       new Goal(2,'Buy Mishiri'),

@@ -16,6 +16,12 @@ export class GoalComponent implements OnInit {
     new Goal(5, ' Buy Omena for Cat', 'hug my cat', new Date(2018,7,7)),
     new Goal(6, 'Plan for my birthday party', 'invite people', new Date(2018,7,7)),
   ];
+  addNewGoal(goal) {
+    let goalLength = this.goals.length;
+    goal.id = goalLength + 1;
+    goal.completedate = new Date (goal.completeDate);
+    this.goals.push(goal);
+  }
   deleteGoal(isComplete, index) {
   if (isComplete) {
     let toDelete = confirm (`Are you sure you want to delete ${this.goals[index].name}`);
