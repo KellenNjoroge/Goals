@@ -4,7 +4,6 @@
 <div class = "container">
   <div class="row" *ngFor='let goal of goals; let i =index'>
     <div class = "row">
-      <app-goal-form></app-goal-form>
     <h4 id="{{i}}" appStrikethrough>{{goal.name}}
       due on {{goal.completeDate|date|uppercase}}
     </h4>
@@ -13,8 +12,8 @@
     <div class="row" *ngIf="goal.showDescription">
     <app-goal-details  [goal] = 'goal' (isComplete)='deleteGoal($event,i)'></app-goal-details>
     </div>
-
   </div>
+  <app-goal-form></app-goal-form>
 </div>
 
 <p *ngIf='goals.length > 5'>You have too many goals</p>
